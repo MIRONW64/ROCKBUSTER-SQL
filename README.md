@@ -10,20 +10,34 @@ In this project I will use **SQL** to **analyze the data** and **answer any ad-h
 
 
 
-# Key Questions and Objectives
+# Key Questions 
 The Rockbuster Stealth Management Board has asked a series of business questions and they expect data-driven answers that they can use for their 2020 company strategy. 
 
 Here are the **main questions** they’d like to answer:
 
-● Which movies contributed the most/least to revenue gain?
+● Which **movies** contributed the **most/least to revenue** gain?
+````bash
+CODE SAMPLE
 
-● What was the average rental duration for all videos?
+SELECT title, rental_duration, F.name, SUM(D.amount)AS total_amount_paid
+FROM film A
+INNER JOIN inventory B ON A.film_id=B.film_id
+INNER JOIN rental C ON B.inventory_id=C.inventory_id
+INNER JOIN payment D ON C.rental_id=D.rental_id
+INNER JOIN film_category E ON A.film_id=E.film_id
+INNER JOIN category F ON E.category_id=F.category_id
+GROUP BY title,rental_duration, F.name
+ORDER BY total_amount_paid ASC
+LIMIT 10;
+````
 
-● Which countries are Rockbuster customers based in?
+● What was the **average rental duration** for all videos? [descriptive analysis script](https://github.com/MIRONW64/ROCKBUSTER-SQL/blob/main/Scripts/Descriptive%20analysis%20descriptive%20analysis%20from%20the%20film%20table)
 
-● Where are customers with a high lifetime value based?
+● Which **countries** are Rockbuster customers based in? [script link](https://github.com/MIRONW64/ROCKBUSTER-SQL/blob/main/Scripts/Top%2010%20countries%20location%20of%20the%20most%20valuable%20clients)
 
-● Do sales figures vary between geographic regions?
+● Where are **customers** with a **high lifetime value** based? [script link](https://github.com/MIRONW64/ROCKBUSTER-SQL/blob/main/Scripts/Most%20valuable%20customers)
+
+● Do **sales figures** vary between **geographic regions**? [script link](https://github.com/MIRONW64/ROCKBUSTER-SQL/blob/main/Scripts/Title%2C%20movie%2C%20Genre%20and%20revenue%20generated%20from%20the%20top%205%20revenue%20driver%C2%B4s%20countries)
 
 
 # Tools
