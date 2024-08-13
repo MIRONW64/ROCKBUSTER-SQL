@@ -50,4 +50,4 @@ LIMIT 10;
 
 # Data Set 
 In this Achievement, you’ll be using a data set that contains information about Rockbuster’s film inventory, customers, and payments, among other things. 
-The first thing you’ll need to do is load the data set into the **PostgreSQL** database
+For this Achievement you will load the data set into the **PostgreSQL** database. 
