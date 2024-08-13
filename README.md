@@ -1,3 +1,6 @@
+
+![Captura de pantalla 2024-08-13 120650](https://github.com/user-attachments/assets/fbee51cc-38c7-4f21-9c6c-69aad88f7544)
+
 # ROCKBUSTER-SQL
 Rockbuster Stealth LLC is a **movie rental company** that used to have stores around the world. Facing stiff competition from streaming services such as Netflix and Amazon Prime, the Rockbuster Stealth management team is planning to use its existing movie licenses to **launch an online video rental service in order to stay competitive**.
 In this project I will use **SQL** to **analyze the data** and **answer any ad-hoc business questions** that other departments may have.
